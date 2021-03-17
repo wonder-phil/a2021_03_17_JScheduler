@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
                 scheduleJob();
             }
         });
-
-
     }
 
    public void scheduleJob() {
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
        JobInfo info = new JobInfo.Builder(JOB_ID, componentName)
                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
                .setPersisted(true)
-               .setPeriodic(15* 60*1000)
+               .setPeriodic(15*60*1000)
                .build();
 
        JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
